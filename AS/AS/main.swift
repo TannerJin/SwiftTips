@@ -48,7 +48,7 @@ let poo = foo as Poo
 
 class AAA {
     /* 1. 该函数编译后会生成两个函数，一个给虚函数表调用，一个给objc调用
-       2. 给objc调用的. 在参数使用前，会调用_ObjectiveCBridgeable协议方法, 将Poo生成_ObjectiveCType对象使用. 在函数return前也会调用_ObjectiveCBridgeable协议方法将生成_ObjectiveCType转换成struct Poo返回
+       2. 给objc调用的. 在参数使用前，会调用_ObjectiveCBridgeable协议方法, 将foo生成_ObjectiveCType对象使用. 在函数return前也会调用_ObjectiveCBridgeable协议方法将生成的_ObjectiveCType转换成struct Poo返回
      */
     @objc func test(_ foo: Foo) -> Foo {
         return foo
